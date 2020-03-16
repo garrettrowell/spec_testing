@@ -2,15 +2,12 @@
 
 require 'spec_helper'
 
-describe 'spec_testing::stage' do
+describe 'spec_testing::hiera::hiera_function_class' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
 
       it { is_expected.to compile }
-      xit 'Stage resource should not be used' do
-        is_expected.to have_stage_resource_count(0)
-      end
     end
   end
 end

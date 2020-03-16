@@ -5,4 +5,8 @@
 # @example
 #   include spec_testing::do_nothing
 class spec_testing::do_nothing {
+
+  if $facts['non_existant_fact'] {
+    notify { 'huh you were not supposed to exist': }
+  }
 }
